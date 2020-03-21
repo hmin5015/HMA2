@@ -37,7 +37,7 @@ namespace HMA2.Controllers
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -139,7 +139,7 @@ namespace HMA2.Controllers
 
                 return Json(true);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return Json(false);
             }
@@ -174,7 +174,7 @@ namespace HMA2.Controllers
 
                 return Json(true);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return Json(false);
             }
