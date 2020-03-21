@@ -1,0 +1,248 @@
+.tab-wrapper {
+  width: 99%;
+  margin: 30px 7px 20px 7px;
+}
+
+.tab-wrapper ul {
+    display: flex;
+}
+
+.tab-wrapper ul::after {
+    content: '';
+    border-bottom: 3px solid #4184C0;
+    width: 99.3%;
+    position: absolute;
+    top: 153px;
+    z-index: -1;
+}
+
+.tab-wrapper ul li {
+    height: 40px;
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+.tab-wrapper ul li span {
+    font-size: 12px;
+    font-weight: bold;
+    min-width: 90px;
+    max-width: 100px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    height: inherit;
+    border-left: 3px solid #3C7BB4;
+    border-right: 3px solid #3C7BB4;
+    border-top: 3px solid #4D80B3;
+    background-image: linear-gradient(#4184C0, #3974A9);
+    color: #FFF;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+.tab-wrapper ul li span.active {
+    color: #004281;
+    background-image: linear-gradient(#F7F7F7, #FFF) !important;
+}
+
+.tab-wrapper ul li span:hover {
+    color: #004281;
+    background-image: linear-gradient(#F7F7F7, #FFF) !important;
+}
+
+.form-wrapper {
+    width: 99%;
+    margin: 20px 7px 20px 7px;
+}
+
+.add-new-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-section {
+    border-top: 2px solid #333;
+    margin-top: 7px;
+    padding: 0 5px;
+}
+
+.form-section div {
+    line-height: 2.5rem;
+    background: #e9f0f4;
+    border-bottom: 0.5px solid #C5C5C5;
+}
+
+.k-action-buttons .k-button + .k-button {
+    display: none;
+}
+
+.custom-input {
+    width: 100%;
+    margin-left: 5px;
+    margin-bottom: 3px;
+    border: none;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.ref-input {
+    width: 100%;
+    border: none;
+    margin-left: 5px;
+    line-height: 1.9;
+    border-bottom: 1px solid #E7E7E7;
+    margin-bottom: 3px;
+}
+
+.required {
+    padding-left: 5px;
+    color: #F6564B;
+    font-weight: bold;
+}
+
+.k-upload.k-header {
+    background: #FFF !important;
+    border: none;
+}
+
+.k-dropzone {
+    background: #FFF;
+    line-height: 0.5rem;
+    border: none;
+}
+
+.k-upload-button {
+    line-height: 1.2rem;
+}
+
+.k-file {
+    background: #FFF;
+    border: none;
+}
+
+.k-file-single {
+    background: #FFF;
+}
+
+.k-upload .k-dropzone {
+    border-color: rgba(0,0,0,.08);
+    color: #656565;
+    background-color: #FFF;
+}
+
+.k-action-buttons {
+    background: #FFF;
+}
+
+.k-upload-status {
+    background: #FFF;
+    border: none;
+}
+
+.k-upload {
+    border-style: none !important;
+}
+
+.save-button,
+.cancel-button {
+    margin: 2px;
+    min-width: 90px;
+    height: 30px;
+    padding: 0;
+    border: 1px solid #E5E5E5;
+    line-height: 2.3em;
+    padding-right: 5px;
+    color: #FFF;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.save-button:hover,
+.cancel-button:hover {
+    opacity: 0.9;
+}
+
+.save-button {
+    border: 1px solid #597a93;
+    background: #7197B3;
+}
+
+.cancel-button {
+    border: 1px solid #828e97;
+    background: #99A7B1;
+}
+
+.grid-wrapper {
+    padding: 0 7px;
+    font-size: 14px;
+}
+
+.k-grid-header-wrap table {
+    width: 100% !important;
+}
+
+.k-grid thead tr {
+    background: #e9f0f4;
+    color: #333;
+}
+
+.grid-title {
+    font-weight: bold;
+}
+
+.grid-toolbar {
+    margin-top: 30px;
+    font-size: 12px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #555;
+}
+
+.total-qty {
+    color: #E04141;
+}
+
+.grid-toolbar-button {
+    border: 1px solid #E5E5E5;
+    line-height: 2.3em;
+    padding-right: 5px;
+}
+
+.k-grid th {
+    padding: 12px;
+}
+
+.k-grid th:nth-child(3) a,
+.k-grid th:nth-child(4) a,
+.k-grid th:nth-child(12) a,
+.k-grid th:nth-child(16) a {
+    text-align: center !important;
+}
+
+.k-grid td {
+    padding: 5px 12px;
+    font-size: 12px;
+}
+
+.k-grid a {
+    font-weight: bold;
+}
+
+.k-grid td a {
+    border-bottom: 1px solid #333;
+    font-weight: bold;
+}
+
+.footer-wrapper {
+    bottom: 0;
+    position: absolute;
+    margin-top: 50px;
+    padding: 20px 0;
+    background: #e6e6e6;
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    color: #707070;
+}
+
+.hide {
+    display: none !important;
+}

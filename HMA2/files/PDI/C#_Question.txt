@@ -1,0 +1,269 @@
+﻿C# 질문
+-------------------------------------------------------------------------------------------------
+Q. What is C#?
+-------------------------------------------------------------------------------------------------
+C# is an object-oriented, type-safe, and managed language that is compiled by .Net framework to 
+generate Microsoft Intermediate Language.
+
+-------------------------------------------------------------------------------------------------
+Q. Explain types of comment in C# with examples
+-------------------------------------------------------------------------------------------------
+Single line
+
+Example:
+
+//This is a single line comment
+ii. Multiple line (/* */)
+
+Example:
+
+/*This is a multiple line comment
+We are in line 2
+Last line of comment*/
+iii. XML Comments (///).
+
+Eg:
+
+/// summary;
+/// Set error message for multilingual language.
+/// summary
+
+
+-------------------------------------------------------------------------------------------------
+Q. Can multiple catch blocks be executed?
+-------------------------------------------------------------------------------------------------
+No, Multiple catch blocks can't be executed. Once the proper catch code executed, 
+the control is transferred to the finally block, and then the code that follows the finally block gets executed.
+
+
+-------------------------------------------------------------------------------------------------
+Q. What is the difference between public, static, and void?
+-------------------------------------------------------------------------------------------------
+*Public declared variables or methods are accessible anywhere in the application. 
+*Static declared variables or methods are globally accessible without creating an instance of the class. 
+ Static member are by default not globally accessible it depends upon the type of access modified used. 
+ The compiler stores the address of the method as the entry point and uses this information to begin execution 
+ before any objects are created. 
+*Void is a type modifier that states that the method or variable does not return any value.
+
+
+-------------------------------------------------------------------------------------------------
+Q. What is an object?
+-------------------------------------------------------------------------------------------------
+An object is an instance of a class through which we access the methods of that class. 
+"New" keyword is used to create an object. 
+A class that creates an object in memory will contain the information about the methods, variables, and behavior of that class.
+
+
+-------------------------------------------------------------------------------------------------
+Q. Define Constructors
+-------------------------------------------------------------------------------------------------
+A constructor is a member function in a class that has the same name as its class. 
+The constructor is automatically invoked whenever an object class is created. 
+It constructs the values of data members while initializing the class.
+
+
+-------------------------------------------------------------------------------------------------
+Q. What is Jagged Arrays?
+-------------------------------------------------------------------------------------------------
+The Array which has elements of type array is called jagged Array. 
+The elements can be of different dimensions and sizes. 
+We can also call jagged Array as an Array of arrays.
+
+
+-------------------------------------------------------------------------------------------------
+Q. What is the difference between ref & out parameters?
+-------------------------------------------------------------------------------------------------
+An argument passed as ref must be initialized before passing to the method whereas 
+out parameter needs not to be initialized before passing to a method.
+
+
+-------------------------------------------------------------------------------------------------
+Q. What is the use of 'using' statement in C#?
+-------------------------------------------------------------------------------------------------
+The 'using' block is used to obtain a resource and process it 
+and then automatically dispose of when the execution of the block completed.
+
+
+-------------------------------------------------------------------------------------------------
+Q. What is serialization?
+-------------------------------------------------------------------------------------------------
+When we want to transport an object through a network, then we have to convert the object into a stream of bytes. 
+The process of converting an object into a stream of bytes is called Serialization. 
+For an object to be serializable, it should implement ISerialize Interface. 
+De-serialization is the reverse process of creating an object from a stream of bytes.
+
+
+-------------------------------------------------------------------------------------------------
+Q. Can we use "this" command within a static method?
+-------------------------------------------------------------------------------------------------
+We can't use 'This' in a static method because we can only use static variables/methods in a static method.
+
+
+-------------------------------------------------------------------------------------------------
+Q. What is the difference between constants and read-only?
+-------------------------------------------------------------------------------------------------
+Constant variables are declared and initialized at compile time. 
+The value can't be changed afterward. 
+Read-only is used only when we want to assign the value at run time.
+
+
+-------------------------------------------------------------------------------------------------
+Q. What is an interface class? Give one example of it
+-------------------------------------------------------------------------------------------------
+An Interface is an abstract class which has only public abstract methods, 
+and the methods only have the declaration and not the definition. 
+These abstract methods must be implemented in the inherited classes.
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DemoApplication
+{
+   interface Guru99Interface
+   {
+      void SetTutorial(int pID, string pName);
+      String GetTutorial();
+   }
+
+   class Guru99Tutorial : Guru99Interface
+   {
+      protected int TutorialID;
+      protected string TutorialName;
+
+      public void SetTutorial(int pID, string pName)
+      {
+          TutorialID = pID;
+          TutorialName = pName;
+      }
+
+      public String GetTutorial()
+      {
+          return TutorialName;
+      }
+
+      static void Main(string[] args)
+      {
+          Guru99Tutorial pTutor = new Guru99Tutorial();
+
+          pTutor.SetTutorial(1,".Net by Guru99");
+
+          Console.WriteLine(pTutor.GetTutorial());
+
+          Console.ReadKey();
+      }
+   }
+}
+
+
+-------------------------------------------------------------------------------------------------
+Q. What are value types and reference types?
+-------------------------------------------------------------------------------------------------
+Value types are stored in the Stack, whereas reference types stored on heap.
+
+Value types: integer, enum, byte, decimal, double, float, long
+Reference Types: int, enum, byte, decimal, double, float, long
+
+
+-------------------------------------------------------------------------------------------------
+Q. What are Custom Control and User Control?
+-------------------------------------------------------------------------------------------------
+Custom Controls are controls generated as compiled code (Dlls), 
+those are easier to use and can be added to toolbox. 
+Developers can drag and drop controls to their web forms. 
+Attributes can, at design time. We can easily add custom controls to Multiple Applications (If Shared Dlls). 
+So, If they are private, then we can copy to dll to bin directory of web application and then add reference and can use them.
+
+User Controls are very much similar to ASP include files, and are easy to create. 
+User controls can't be placed in the toolbox and dragged - dropped from it. 
+They have their design and code-behind. The file extension for user controls is ascx.
+
+
+-------------------------------------------------------------------------------------------------
+Q. Absolute Class 의 차이점은?
+-------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------
+Q. Depency Injection 을 설명하시오.
+-------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------
+Q. Async 와 Sync 의 차이점은?
+-------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------
+Q. Restful API 또는 WebService 사용 경험 
+-------------------------------------------------------------------------------------------------
+Newtonsoft.Json
+
+-------------------------------------------------------------------------------------------------
+Q. 
+-------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------
+Q. 
+-------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------
+Q. 
+-------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------
+Q. 
+-------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------
+Q. 
+-------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------
+Q. 
+-------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------
+Q. 
+-------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------
+Q. 
+-------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------
+Q. 
+-------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------
+Q. 
+-------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------
+Q. 
+-------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------
+Q. 
+-------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------
+Q. 
+-------------------------------------------------------------------------------------------------
+
+

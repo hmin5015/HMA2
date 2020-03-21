@@ -1,0 +1,27 @@
+.header-wrapper {
+    padding: 20px 20px 0 20px;
+    background-image: linear-gradient(#E5E5E5, #FFF);
+}
+
+.header-wrapper::after {
+    content: '';
+    height: 7px;
+    margin: 20px -20px 0 -20px;
+    background-image: -webkit-gradient(linear, left top, right top, from(#274F7C), to(#4880C8));
+    background-image: linear-gradient(to right, #274F7C, #4880C8);
+    display: block;
+}
+
+.title {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.header-button {
+    width: auto;
+    height: 35px;
+    font-size: 0.8em;
+    margin: 0;
+    padding: 8px 5px;
+    box-shadow: none;
+}

@@ -1,0 +1,128 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "HMA";
+}
+
+<div class="header-wrapper">
+    <div class="col-sm-12 col-md-4 inline-block vertical-sub">
+        <img src="~/Content/images/top_logo.png" />
+    </div>
+    <div class="col-sm-12 col-md-4 inline-block vertical-sub center-align">
+        <span class="title">HMA PDI Apps Manager Panel</span>
+    </div>
+    <div class="col-sm-12 col-md-4 inline-block vertical-sub right-align">
+        <span class="padding-right-15">gittest</span>
+        <Button class="header-button">LOG OUT</Button>
+    </div>
+</div>
+
+<div class="tab-wrapper">
+    <ul>
+        <li id="1" onclick="onTabClick(1);">
+            <span class="active">PDI</span>
+        </li>
+        <li id="2" onclick="onTabClick(2);">
+            <span>Bluetooth</span>
+        </li>
+        <li id="3" onclick="onTabClick(3);">
+            <span>Database</span>
+        </li>
+        <li id="4" onclick="onTabClick(4);">
+            <span>PIM F/W</span>
+        </li>
+        <li id="5" onclick="onTabClick(5);">
+            <span>GDS Database</span>
+        </li>
+        <li id="6" onclick="onTabClick(6);">
+            <span>Model Master</span>
+        </li>
+        <li id="7" onclick="onTabClick(7);">
+            <span>VCI F/W</span>
+        </li>
+    </ul>
+</div>
+
+<div class="form-wrapper hide">
+    <div class="add-new-title">
+        PDI - Add [Current Version : 1.0.1]
+    </div>
+    <div class="form-section">
+        <div class="form-row">
+            <div class="col-sm-12 col-md-6 col-lg-2 inline-block">
+                <span class="label">Version Name</span>
+                <span class="required">*</span>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-10 inline-block white-background">
+                <input id="versionName" class="k-textbox-container ref-input" type="text" name="versionName" value="" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-sm-12 col-md-6 col-lg-2 inline-block">
+                <span class="label">Memo</span>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-10 inline-block white-background">
+                <input id="memo" class="k-textbox-container custom-input" name="memo" value="" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-sm-12 col-md-6 col-lg-2 inline-block">
+                <span class="label"></span>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-10 inline-block white-background">
+                <input name="files" id="files" type="file" aria-label="files" />
+            </div>
+        </div>
+        <div class="form-row white-background no-border">
+            <div class="col-md-12 white-background center-align margin-20 no-border">
+                <Button class="save-button" onClick="onSave();">SAVE</Button>
+                <Button class="cancel-button" onClick="onCancel();">CANCEL</Button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="grid-wrapper">
+    <div class="grid-title">
+        <span></span>
+    </div>
+    <div class="grid-toolbar">
+        <div class="col-md-6 inline-block no-padding">
+            [<span class="page-no">1</span> / 
+            <span class="total-page">1</span> Page] 
+            <span class="total-qty">0</span> items
+        </div>
+        <div class="col-md-6 inline-block no-padding right-align">
+            <Button class="grid-toolbar-button" onClick="onAdd();">ADD</Button>
+        </div>
+    </div>
+    <div class="">
+        <div class="col-md-12 no-padding">
+            <div id="grid"></div>
+        </div>
+    </div>
+</div>
+
+<div class="footer-wrapper">
+    Copyrightⓒ 2020 Hyundai Motor America. All rights reserved. [DEV]
+</div>
+
+<div class="modal" id="message-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-inner">
+        <div class="modal-header">
+            <span>NOTICE</span>
+        </div>
+        <p class="padding-top-30">The data has been deleted.</p>
+        <Button class="custom-button margin-top-15 btn-skyblue" onClick="$('#message-modal').modal('hide');">CLOSE</Button>
+    </div>
+</div>
+
+<div class="modal" id="confirm-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-inner">
+        <div class="modal-header">
+            <span>CONFIRM</span>
+        </div>
+        <p class="padding-top-30">Do you really want to delete data?</p>
+        <Button class="custom-button margin-top-15 margin-right-5 btn-skyblue" onClick="onDeleteVersion();">YES</Button>
+        <Button class="custom-button margin-top-15 btn-skyblue" onClick="$('#confirm-modal').modal('hide');">NO</Button>
+    </div>
+</div>  
